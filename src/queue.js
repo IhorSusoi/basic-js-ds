@@ -24,7 +24,7 @@ class Queue {
   }
 
   enqueue(value) {
-    const newNode = new ListNode(value);
+    let newNode = new ListNode(value);
     if (!this.root) {
       this.root = newNode;
       return;
@@ -40,7 +40,7 @@ class Queue {
     if (!this.root) {
       return null;
     }
-    const nodeToRemove = this.root;
+    let nodeToRemove = this.root;
     this.root = nodeToRemove.next;
     return nodeToRemove.value;
   }
